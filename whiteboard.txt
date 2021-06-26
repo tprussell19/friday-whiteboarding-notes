@@ -1,0 +1,35 @@
+----- This is the txt file where I did my actual whiteboard session -----
+
+
+Question #4: Checking for Uniqueness
+
+Write an algorithm that determines whether all the elements in a string are unique. You may not convert the string into an array or use array methods to solve this problem. The algorithm should return a boolean.
+
+Example
+Input: "hello"
+
+Output: false
+
+Input: "copyright"
+
+Output: true
+
+------------------------------------------------
+
+// loop through string to check if character is same as another character
+
+// if character === character, increment a counter
+
+function uniqueString(str) {
+  for (i = 0; i < str.length; i++) {
+    let repeatCounter = 0;
+    for (j = 0; j < str.length; j++) {
+      if (str.charAt(j) === str.charAt(i)) {
+        repeatCounter++;
+      }
+    }
+    if (repeatCounter > 1) {
+      return false;
+    } else return true;
+  }
+}
